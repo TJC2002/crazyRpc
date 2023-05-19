@@ -1,0 +1,20 @@
+rpc:
+  mode-registration: true
+  hostname: provider
+  consumer:
+    server:
+      host: localhost
+      port: 19990
+  registration:
+    host: localhost
+    port: 19999
+  provider:
+    host: localhost
+    port: 19990
+    http:
+      host: localhost
+      port: 14449
+    loadbalance:
+      weight: 12
+server:
+  port: 19997

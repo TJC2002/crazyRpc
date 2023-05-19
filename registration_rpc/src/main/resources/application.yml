@@ -1,0 +1,14 @@
+
+rpc:
+  mode-registration: true
+  consumer:
+    server:
+      host: localhost
+      port: 19990
+  provider:
+    port: 19990
+
+  register:
+    port: 19999
+server:
+  port: 19998

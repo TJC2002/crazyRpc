@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+
+rpc:
+  mode-registration: true
+  consumer:
+#    random weight_round_robin round_robin weight_robin source_hash
+    loadbalance: round_robin
+    server:
+      host: localhost
+      port: 19990
+    registration:
+      hostnode:
+        cache:
+          savetime: 300
+  registration:
+    host: localhost
+    port: 19999
+  provider:
+    port: 19990
